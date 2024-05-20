@@ -1,0 +1,281 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+
+.banner {
+    height: 63vh;
+    width: 100%;
+    background-color: #f5f5f5;
+    background-size: cover;
+    overflow: hidden;
+    position: relative;
+}
+
+/* header */
+.header {
+    display: flex;
+    position: relative;
+    width: 85%;
+    margin: 3px 0px 0px 12px;
+    padding: 9px 0px 0px 20px;
+    /* background-color: #f5f5f5; */
+    /* background-color: green; */
+}
+
+.header a {
+    text-decoration: none;
+}
+
+.header .logo {
+    width: 25%;
+    margin-left: 20px;
+    /* background-color: purple; */
+}
+
+.first-title a {
+    margin: 5px 0px 0px 26px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #CCCC33;
+    position: absolute;
+}
+
+.second-title a {
+    font-size: 28px;
+    font-weight: bold;
+    color: red;
+    position: absolute;
+    margin: 22px 0px 0px 60px;
+}
+
+.navigation {
+    display: flex;
+    width: 100%;
+    margin: 15px 0px 0px 200px;
+    padding: 5px 0px 5px 2px;
+
+    /* background-color: aqua; */
+}
+
+nav a {
+    margin-left: 20px;
+    margin-top: 10px;
+    padding: 15px 5px 15px 10px;
+    font-size: 20px;
+    font-weight: bold;
+    color: grey;
+}
+
+nav a:hover {
+    text-decoration: underline;
+    color: #FF9999;
+}
+
+.navv {
+    width: 60%;
+    /* background-color: blueviolet; */
+}
+
+.signup {
+    top: 0;
+    width: 25%;
+    margin-left: 450px;
+    height: 100%;
+    /* background-color: #FFB6C1; */
+    position: absolute;
+
+}
+
+.signup a {
+    position: absolute;
+    width: 75px;
+    margin: 25px 0px 0px 240px;
+    padding: 5px 10px 5px 10px;
+    font-size: 14px;
+    text-align: center;
+    color: #ffffff;
+    background-color: red;
+    box-shadow: 0px 0px 5px grey;
+    border-radius: 5px;
+}
+
+.signup a:hover {
+    color: #000000;
+    background-color: #FF9999;
+}
+
+/* first layout */
+.banner .content {
+    display: flex;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.content .content1 {
+    width: 64%;
+    /* background-color: orange; */
+}
+
+.content .content1 .paragraph {
+    margin-top: 75px;
+    margin-left: 82px;
+}
+
+small {
+    text-align: left;
+    font-size: 42px;
+    font-weight: bold;
+    color: #CCCC33;
+}
+
+big {
+    text-align: left;
+    font-size: 42px;
+    font-weight: bold;
+    color: red;
+}
+
+.content .content1 .paragraph p {
+    text-align: left;
+    font-size: 42px;
+    font-weight: bold;
+}
+
+.content .content1 .paragraph span p {
+    text-align: left;
+    font-size: 18px;
+    font-weight: lighter;
+    margin-top: 12px;
+    margin-left: 2px;
+}
+
+.content .content1 .image img {
+    top: 0;
+    margin-top: 32px;
+    position: absolute;
+    height: 340px;
+    width: 330px;
+    margin-left: 745px;
+}
+
+.boxes .box2 {
+    top: 0;
+    margin-top: 250px;
+    position: absolute;
+    width: 9%;
+    background-color: #eafaea;
+    margin-left: 700px;
+    border-radius: 6px;
+    box-shadow: 0px 0px 5px grey;
+}
+
+.boxes .box1 {
+    top: 0;
+    position: absolute;
+    margin-top: 300px;
+    margin-left: 980px;
+    width: 10%;
+    background-color: #eafaea;
+    border-radius: 6px;
+    box-shadow: 0px 0px 5px grey;
+}
+
+.boxes p {
+    font-size: 20px;
+    padding: 12px;
+}
+
+.social-media {
+    display: block;
+    top: 0;
+    width: 10%;
+    height: 150px;
+    text-decoration: none;
+    margin-top: 10px;
+    margin-left: 120px;
+    background-color: #000000;
+}
+
+.social-media a i {
+    color: white;
+    font-size: 25px;
+    margin-top: 12px;
+    padding: 5px;
+}
+
+.social-media a i:hover {
+    color: red;
+}
+
+/* .next{
+    top: 0;
+    position: absolute;
+    height: 85%;
+    margin-left: 860px;
+    width: 21.2%;
+    background-color: #FFB6C1;
+} */
+.learn-more {
+    margin-left: 85px;
+    margin-top: 20px;
+}
+
+.learn-more a {
+    font-size: 15px;
+    padding: 8px 10px 8px 10px;
+    background-color: red;
+    color: #ffffff;
+    box-shadow: 0px 0px 2px black;
+    border-radius: 5px;
+    text-decoration: none;
+
+}
+
+.learn-more a:hover {
+    background-color: #CCCC33;
+    color: black;
+}
+
+/* second-layout */
+.aboutus {
+    width: 100%;
+    height: 60vh;
+    background-color: #ffffff;
+}
+
+.aboutus .about-learn {
+    top: 0;
+    position: absolute;
+    margin-top: 650px;
+    margin-left: 610px;
+}
+
+.about-learn a {
+    font-size: 15px;
+    padding: 8px 10px 8px 10px;
+    background-color: red;
+    color: #ffffff;
+    box-shadow: 0px 0px 2px black;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.about-learn a:hover {
+    background-color: #CCCC33;
+    color: black;
+}
+
+/* third layout */
+.recent-recipes {
+    background-color: #f5f5f5;
+    width: 100%;
+    height: 30vh;
+}

@@ -1,0 +1,365 @@
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    scrollbar-width: 0;
+}
+
+
+/* header */
+.header {
+    top: 0;
+    z-index: 1000;
+    position: fixed;
+    width: 100%;
+    display: flex;
+    background-color: #f5f5f5;
+    border-bottom: 1px solid rgb(224, 221, 221);
+}
+
+.dash {
+    margin: 30px 00px 20px 45px;
+    line-height: 1.9;
+    text-align: left;
+    text-decoration: none;
+    font-size: 22px;
+    color: grey;
+}
+
+.dash:hover {
+    color: #000000;
+}
+
+.right-panel {
+    text-align: right;
+}
+
+button {
+    margin: 20px 40px 20px 905px;
+    font-weight: bolder;
+    font-size: 12px;
+    padding: 5px;
+    width: 100px;
+    border: 1px solid black;
+    cursor: pointer;
+    color: #ffffff;
+    background-color: #4169E1;
+    text-decoration: none;
+}
+
+button a {
+    color: white;
+    text-decoration: none;
+}
+
+button:hover {
+    background-color: #6f59c0;
+    color: #F5F5F5;
+}
+
+
+/* sidebar */
+nav {
+    position: fixed;
+    z-index: 1000;
+    top: 66px;
+    height: 100%;
+    width: 230px;
+    background-color: #f5f5f5;
+    border-right: 1px solid rgb(224, 221, 221);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+nav ul li {
+    margin: 0;
+    padding: 0;
+    float: left;
+
+}
+
+nav ul li a {
+    display: block;
+    padding: 10px 25px;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    color: #8B0000;
+    text-align: center;
+}
+
+/* 
+nav ul :hover a{
+    background-color: springgreen;
+    color: red;
+
+}
+
+nav ul li :hover a{
+    background-color: yellow;
+    color: red;
+}
+
+/* .dropdown{
+    position: relative;
+    display: inline-block;
+} */
+
+/* .dropdown-content{
+    position: absolute;
+    background-color: #000000;
+    min-width: 200px;
+    z-index: 1;
+    visibility: hidden;
+}  */
+
+/* .dropdown-content a{
+    display: block;
+    color: yellow;
+    padding: 5px 14px;
+    text-decoration: none;
+} */
+.active {
+    background-color: lightblue;
+    border-left: 3px solid darkblue;
+}
+
+
+/* createcategory.php  */
+.heading {
+    position: static;
+    padding: 10px 0px 10px 5px;
+    margin: 90px 0px 0px 260px;
+}
+
+.headings {
+    padding: 10px 0px 10px 5px;
+    margin: 10px 0px 0px 260px;
+}
+
+
+fieldset {
+    background-color: #ffffff;
+    border: 1px solid #ffffff;
+}
+
+.heading p {
+    font-size: 32px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.form-grp {
+    position: relative;
+    margin: 0px 0px 15px 0px;
+    padding: 3px;
+    border-radius: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.form_input {
+    margin-top: 3px;
+    padding: 5px;
+    width: 500px;
+    height: 18px;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    outline: none;
+}
+
+.form_input:focus {
+    border-color: orange;
+    outline: none;
+}
+
+.filled {
+    background-color: orange;
+}
+
+textarea {
+    font-family: Arial, Helvetica, sans-serif;
+    border: 1px solid black;
+}
+
+textarea:focus {
+    border-color: rgb(138, 95, 202);
+    outline: none;
+    border-width: 2px;
+}
+
+.select {
+    margin-top: 5px;
+    font-weight: lighter;
+    font-size: 14px;
+}
+
+.select input {
+    top: 2px;
+}
+
+.success {
+    margin: 10px 0px 10px 0px;
+    font-size: 13px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+    padding: 8px;
+    width: 100px;
+    border: 1px solid black;
+    border-radius: 4px;
+    cursor: pointer;
+    color: #ffffff;
+    background-color: hsl(120, 50%, 40%);
+
+}
+
+.success:hover {
+    background-color: #008000;
+}
+
+.danger {
+    margin: 10px 0px 10px 5px;
+    font-size: 13px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+    padding: 8px;
+    width: 100px;
+    border: 1px solid black;
+    border-radius: 4px;
+    cursor: pointer;
+    color: #ffffff;
+    background-color: #FF0000;
+}
+
+.danger:hover {
+    background-color: #E30022;
+}
+
+.message1 {
+    color: red;
+}
+
+/* listcategory */
+table {
+    width: 90%;
+    border-collapse: collapse;
+    border: 1px solid rgb(224, 221, 221);
+    /* border: 1px solid rgb(224, 221, 221); */
+    background-color: #f5f5f5;
+}
+
+thead th {
+    padding: 8px;
+    margin-right: 10px;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f5f5f5;
+    border: 1px solid rgb(224, 221, 221);
+    border-bottom: 2px solid rgb(224, 221, 221);
+}
+
+tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+tr:hover {
+    background-color: #D3D3D3;
+}
+
+.list {
+    scrollbar-width: 0;
+}
+
+td {
+    width: 25%;
+    padding: 12px;
+    border: 1px solid rgb(224, 221, 221);
+    ;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+.status {
+    width: 25%;
+    padding: 10px;
+}
+
+.success1 {
+    background-color: rgb(115, 228, 115);
+    color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+.error {
+    background-color: #ffcccc;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+.edit {
+    margin: 0px 4px 0px 8px;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+    padding: 3px;
+    border: 1px solid #000000;
+    border-radius: 4px;
+    cursor: pointer;
+    color: #ffffff;
+    background-color: #008000;
+}
+
+.edit:hover {
+    background-color: hsl(120, 50%, 40%);
+}
+
+.delete {
+    /* display:flex; */
+    margin: 0px 8px 0px 4px;
+    font-size: 15px;
+    padding: 3px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+    border: 1px solid #000000;
+    border-radius: 4px;
+    cursor: pointer;
+    color: #ffffff;
+    background-color: #FF5733;
+}
+
+.delete:hover {
+    background-color: #E30022;
+}
+
+/* createRecipe */
+#category {
+    width: 513px;
+    padding: 5px;
+}
+
+.recipe-content {
+    position: absolute;
+}
+
+.content {}
+
+textarea {
+    margin-top: 3px;
+    padding: 5px;
+    width: 500px;
+    height: 18px;
+    font-size: 15px;
+}
