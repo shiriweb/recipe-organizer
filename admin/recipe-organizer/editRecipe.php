@@ -32,7 +32,7 @@ if (isset($_GET['id'])) {
         $recipe->set('keywords', $_POST['keywords']);
         $recipe->set('created_date', date('Y-m-d H:i:s'));
 
-        if (isset($_FILES['image'])) {
+        if (isset ($_FILES['image'])) {
             $file_name = $_FILES['image']['name'];
             $file_size = $_FILES['image']['size'];
             $file_tmp = $_FILES['image']['tmp_name'];
