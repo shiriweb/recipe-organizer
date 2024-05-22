@@ -24,6 +24,8 @@ include ('sidebar.php');
     <div class="row">
         <div class="heading">
             <p>List Recipe</p>
+            <a href="createRecipe.php" class="create-button"><i class="fas fa-plus-circle"></i>  Create Recipe</a>
+
         </div>
     </div>
     <?php

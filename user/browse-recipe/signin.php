@@ -63,16 +63,14 @@ if (isset($_POST['submit'])) {
 </head>
 
 <body>
-    <div class="container" id="popupContainer">
+    <div class="container">
         <div class="userform">
             <form action="" method="post" novalidate>
                 <fieldset>
-                    <i class="fas fa-times"></i>
+                    <!-- <i class="fas fa-times"></i> -->
                     <div class="title">
                         <h3> Create an account </h3>
                     </div>
-
-
                     <?php if (isset($status)) {
                         echo "<label class='error' style='color:green;'>$status</label>";
                     }

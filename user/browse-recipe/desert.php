@@ -24,9 +24,9 @@ $datalist = $recipeObj->desert();
                 <div class="recipe-image">
                     <img src="../../admin/images/<?php echo $recipe['image']; ?>">
                 </div>
-                <div class="information">
+                <!-- <div class="information">
                     <span><i class="fas fa-clock"><?php echo $recipe['cooking_time']; ?></i><span>
-                </div>
+                </div> -->
                 <div class="recipe-title">
                     <h1><?php echo $recipe['recipe_name']; ?></h1>
                 </div>

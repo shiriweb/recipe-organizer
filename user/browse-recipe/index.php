@@ -21,11 +21,11 @@
     <!-- second layout -->
     <div class="aboutus">
         <?php
-        include ('about.php');
+        include ('about_us.php');
         ?>
-        <div class="about-learn">
+        <!-- <div class="about-learn">
             <a href="aboutLearn.php">Learn More</a>
-        </div>
+        </div> -->
     </div>
     <!-- third layout -->
     <div class="recent-recipe">

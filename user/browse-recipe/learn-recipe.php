@@ -10,23 +10,13 @@ if (isset($_SESSION['message']) && $_SESSION['message'] !== "") {
 
 $recipeObj = new Recipe();
 
-$datalist = array(); // Initialize $datalist variable
-
 if (isset($_GET['id'])) {
     $id = $_GET['id'];
     $recipeObj->set('id', $id);
-    $data = $recipeObj->fetchId();
-    // Check if data was successfully fetched
-    if (!is_array($data)) {
-        // Handle error, for example:
-        echo "Error: $data";
-    } else {
-        // Assign fetched data to $datalist
-        $datalist[] = $data;
-    }
+    $datalist = $recipeObj->fetchById();
 }
-?>
 
+?>
 <div class="recipe-details">
     <?php foreach ($datalist as $key => $recipe) { ?>
         <div class="recipe-image">

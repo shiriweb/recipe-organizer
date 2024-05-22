@@ -54,7 +54,7 @@
                 <p><i class="fas fa-check-circle"></i><br><br>User Feedback </p>
             </div>
             <div class="choose-content">
-                <p>\We value the feedback of our users and actively incorporate it into our platform. </p>
+                <p>We value the feedback of our users and actively incorporate it into our platform. </p>
             </div>
         </div>
         <div class="choose-box">

@@ -26,7 +26,7 @@
                 <a href="aboutLearn.php" class="nav">About </a>
         </div>
         <div class="signup">
-            <a href="" class="nav" id="log-in">Sign Up</a>
+            <a href="signin.php" class="nav" id="log-in">Sign Up</a>
         </div>
     </div>
 </div>

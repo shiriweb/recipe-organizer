@@ -17,6 +17,7 @@ include ('sidebar.php');
     <div class="row">
         <div class="heading">
             <p>List Category</p>
+                <a href="createCategory.php" class="create-button"><i class="fas fa-plus-circle"></i>  Create Category</a>
         </div>
     </div>
 

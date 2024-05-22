@@ -1,6 +1,6 @@
 <?php
-// include('header.php');
-// include('sidebar.php');
+include('header.php');
+include('sidebar.php');
 include ('../class/category_class.php');
 include ('../class/recipe_class.php');
 
@@ -78,6 +78,7 @@ if (isset($_POST['submit'])) {
         <div class="row">
             <div class="heading">
                 <p>Create Recipes</p>
+                <a href="listRecipe.php" class="create-button"><i class="fas fa-list-ul"></i>List Recipe</a>
             </div>
         </div>
 

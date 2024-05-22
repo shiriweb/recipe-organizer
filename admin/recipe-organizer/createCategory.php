@@ -31,6 +31,8 @@ include ('sidebar.php');
     <div class="row">
         <div class="heading">
             <p>Create Category</p>
+            <a href="listCategory.php" class="create-button"><i class="fas fa-list-ul"></i> List Category</a>
+
         </div>
     </div>
     <div class="row">

@@ -99,41 +99,7 @@ nav ul li a {
     text-align: center;
 }
 
-/* 
-nav ul :hover a{
-    background-color: springgreen;
-    color: red;
 
-}
-
-nav ul li :hover a{
-    background-color: yellow;
-    color: red;
-}
-
-/* .dropdown{
-    position: relative;
-    display: inline-block;
-} */
-
-/* .dropdown-content{
-    position: absolute;
-    background-color: #000000;
-    min-width: 200px;
-    z-index: 1;
-    visibility: hidden;
-}  */
-
-/* .dropdown-content a{
-    display: block;
-    color: yellow;
-    padding: 5px 14px;
-    text-decoration: none;
-} */
-.active {
-    background-color: lightblue;
-    border-left: 3px solid darkblue;
-}
 
 
 /* createcategory.php  */
@@ -141,11 +107,29 @@ nav ul li :hover a{
     position: static;
     padding: 10px 0px 10px 5px;
     margin: 90px 0px 0px 260px;
+    position: flex;
+    width: 100%;
 }
 
 .headings {
     padding: 10px 0px 10px 5px;
     margin: 10px 0px 0px 260px;
+
+}
+.heading a{
+    margin: 10px 10px 10px 700px;
+    padding: 8px;
+    text-decoration: none;
+    width: 40px;
+    background-color: #f5f5f5;
+    font-size: 16px;
+    color: black;
+    border: 1px solid white;
+    border-radius: 5px;
+}
+.heading a:hover{
+    background-color: #f2f2f2;
+    color: red;
 }
 
 
@@ -179,8 +163,13 @@ fieldset {
     outline: none;
 }
 
+.form_input:hover {
+    border-color: rgb(92, 205, 223);
+    outline: none;
+}
+
 .form_input:focus {
-    border-color: orange;
+    border-color: rgb(92, 205, 223);
     outline: none;
 }
 
@@ -193,8 +182,13 @@ textarea {
     border: 1px solid black;
 }
 
+textarea:hover {
+    border-color:  rgb(92, 205, 223);
+    outline: none;
+    border-width: 2px;
+}
 textarea:focus {
-    border-color: rgb(138, 95, 202);
+    border-color:  rgb(92, 205, 223);
     outline: none;
     border-width: 2px;
 }
@@ -285,7 +279,6 @@ td {
     width: 25%;
     padding: 12px;
     border: 1px solid rgb(224, 221, 221);
-    ;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;
 }
@@ -320,6 +313,7 @@ td {
     cursor: pointer;
     color: #ffffff;
     background-color: #008000;
+    text-decoration: none;
 }
 
 .edit:hover {
@@ -338,12 +332,15 @@ td {
     cursor: pointer;
     color: #ffffff;
     background-color: #FF5733;
+    text-decoration: none;
 }
 
 .delete:hover {
     background-color: #E30022;
 }
-
+.create-button{
+    width: 30%;
+}
 /* createRecipe */
 #category {
     width: 513px;
@@ -353,8 +350,6 @@ td {
 .recipe-content {
     position: absolute;
 }
-
-.content {}
 
 textarea {
     margin-top: 3px;
