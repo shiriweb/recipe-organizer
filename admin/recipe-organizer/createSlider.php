@@ -8,6 +8,7 @@ $slider = new ImageSlider();
 $error = [];
 @session_start();
 if (isset($_POST['submit'])) {
+    
     $slider->set('uploaded_date', date('Y-m-d H:i:s'));
 
     if (isset($_FILES['image'])) {
