@@ -15,6 +15,7 @@ $datalist = $recipeObj->recentlyAdded();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../style/recentadded.css">
+    <link rel="stylesheet" href="../style/style.css">
 </head>
 
 <body>
@@ -42,7 +43,7 @@ $datalist = $recipeObj->recentlyAdded();
                     <?php echo $recipe['short_details']; ?>
                 </div>
                 <div class="learn">
-                    <a href="learn-recipe.php">Learn More<i class="fas fa-arrow-right"></i>
+                    <a href="learn-recipe.php?id=<?php echo $recipe['id']?>">Learn More<i class="fas fa-arrow-right"></i>
                     </a>
                 </div>
             </div>

@@ -13,12 +13,23 @@ $recipeObj = new Recipe();
 if (isset($_GET['id'])) {
     $id = $_GET['id'];
     $recipeObj->set('id', $id);
-    $datalist = $recipeObj->fetchById();
+    $datalist = $recipeObj->fetch();
+    // echo $id;
 }
-
 ?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../style/style.css">
+</head>
+<body>
+
 <div class="recipe-details">
-    <?php foreach ($datalist as $key => $recipe) { ?>
+    <?php foreach ($datalist as $key =>$recipe) { ?>
         <div class="recipe-image">
             <img src="../../admin/images/<?php echo $recipe['image']; ?>">
         </div>
@@ -27,6 +38,7 @@ if (isset($_GET['id'])) {
         </div>
         <div class="information">
             <span><i class="fas fa-clock"><?php echo $recipe['cooking_time']; ?></i></span>
+            <span><i class="fas fa-clock"><?php echo $recipe['preparation_time']; ?></i></span>
             <span><i class="fas fa-serve"><?php echo $recipe['serving']; ?></i></span>
             <span><i class="fas fa-level"><?php echo $recipe['cooking_level']; ?></i></span>
         </div>
@@ -42,3 +54,5 @@ if (isset($_GET['id'])) {
 
     <?php } ?>
 </div>
+</body>
+</html>

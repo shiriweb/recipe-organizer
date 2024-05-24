@@ -151,12 +151,16 @@ class Recipe extends Common
     // Inside your Recipe class
 public function fetch() {
     $conn = mysqli_connect('localhost', 'root', '', 'sem_project');
-    $id = $this->id; // Assuming $this->id contains the ID you want to fetch
+    $id = $this->id; 
     $sql = "SELECT * FROM recipe WHERE id = '$id'";
     $result = $conn->query($sql);
     if ($result->num_rows > 0) {
         $data = $result->fetch_all(MYSQLI_ASSOC);
         return $data;
+        // echo "<pre>";
+        // print_r($data);
+        // echo "</pre>";
+
     } else {
         $error = "Error occurred";
         return $error;

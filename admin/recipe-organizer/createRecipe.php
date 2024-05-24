@@ -1,6 +1,6 @@
 <?php
-include('header.php');
-include('sidebar.php');
+// include ('header.php');
+include ('sidebar.php');
 include ('../class/category_class.php');
 include ('../class/recipe_class.php');
 
@@ -147,12 +147,9 @@ if (isset($_POST['submit'])) {
                                 <label for="detail">Preparation Instruction</label><br>
                                 <textarea id="instruction" name="instructions" class="form_input" cols="60" rows="30"
                                     required></textarea>
+                                \
                                 <script>
-                                    ClassicEditor
-                                        .create(document.querySelector('#instruction'))
-                                        .catch(error => {
-                                            console.error(error);
-                                        });
+                                    ckeditor("#instruction");
                                 </script>
                             </div>
                             <div class="form-grp">
@@ -172,11 +169,7 @@ if (isset($_POST['submit'])) {
                                 <textarea name="nutritional_info" id="nutritional_info" class="form_input" cols="6"
                                     rows="8" required></textarea>
                                 <script>
-                                    ClassicEditor
-                                        .create(document.querySelector('#nutritional_info'))
-                                        .catch(error => {
-                                            console.error(error);
-                                        });
+                                    ckeditor("#nutritional_info");
                                 </script>
                             </div>
                         </div>
@@ -204,12 +197,16 @@ if (isset($_POST['submit'])) {
         </fieldset>
         </form>
     </div>
-    </div>
-    </div>
+    <script>
+        function ckeditor(class) {
 
-</body>
-
-</html>
+            ClassicEditor
+                .create(document.querySelector('class'))
+                .catch(error => {
+                    console.error(error);
+                });
+        }
+    </script>
 </body>
 
 </html>

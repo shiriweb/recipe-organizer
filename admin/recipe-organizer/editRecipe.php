@@ -13,26 +13,29 @@ if (isset($_GET['id'])) {
     $id = $_GET['id'];
     $recipe->set('id', $id);
     $data = $recipe->fetchById();
+    $categori = explode(",", $data->category);
     // echo "<pre>";
-    // print_r($data->title);
+    // print_r($data);
+    // print_r($categori);
+    // print_r($categoryList);
     // echo "</pre>";
 
     if (isset($_POST['submit'])) {
         $recipe->set('recipe_name', $_POST['recipe_name']);
         $recipe->set('cooking_time', $_POST['cooking_time']);
         $recipe->set('cooking_level', $_POST['cooking_level']);
-        $recipe->set('cooking_method', $_POST['cooking_method']);
         $recipe->set('serving', $_POST['serving']);
         $recipe->set('ingredients', $_POST['ingredients']);
         $recipe->set('instructions', $_POST['instructions']);
         $recipe->set('short_details', $_POST['short_details']);
+        $recipe->set('description', $_POST['description']);
         $recipe->set('nutritional_info', $_POST['nutritional_info']);
         $categories = implode(',', $_POST['category']);
         $recipe->set('category', $categories);
         $recipe->set('keywords', $_POST['keywords']);
         $recipe->set('created_date', date('Y-m-d H:i:s'));
 
-        if (isset ($_FILES['image'])) {
+        if (isset($_FILES['image'])) {
             $file_name = $_FILES['image']['name'];
             $file_size = $_FILES['image']['size'];
             $file_tmp = $_FILES['image']['tmp_name'];
@@ -120,11 +123,7 @@ include ('sidebar.php');
                                 value="<?php echo $data->cooking_level; ?>" required>
                         </div>
 
-                        <div class="form-grp">
-                            <label>Cooking Method</label><br>
-                            <input type="text" class="form_input" name="cooking_method" id="cooking_method"
-                                value="<?php echo $data->cooking_method; ?>" required>
-                        </div>
+
 
                         <div class="form-grp">
                             <label>Serving</label><br>
@@ -135,7 +134,7 @@ include ('sidebar.php');
                         <div class="form-grp">
                             <label for="ingredients">Ingredients</label><br>
                             <textarea name="ingredients" id="ingredients" class="form_input" cols="60" rows="30"
-                                value="<?php echo $data->ingredients; ?>" required></textarea>
+                                required>  <?php echo $data->ingredients; ?></textarea>
                             <script>
                                 ClassicEditor
                                     .create(document.querySelector('#ingredients'))
@@ -147,8 +146,8 @@ include ('sidebar.php');
 
                         <div class="form-grp">
                             <label for="detail">Preparation Instruction</label><br>
-                            <textarea id="instruction" name="instructions" class="form_input"
-                                value="<?php echo $data->instructions; ?>" cols="60" rows="30" required></textarea>
+                            <textarea id="instruction" name="instructions" class="form_input" cols="60" rows="30"
+                                required>  <?php echo $data->instructions; ?></textarea>
                             <script>
                                 ClassicEditor
                                     .create(document.querySelector('#instruction'))
@@ -156,17 +155,31 @@ include ('sidebar.php');
                                         console.error(error);
                                     });
                             </script>
+
                         </div>
                         <div class="form-grp">
                             <label>Short Details</label><br>
-                            <textarea name="short_details" class="form_input" id="short_details"
-                                value="<?php echo $data->short_details; ?>" cols="6" rows="8" required></textarea>
+                            <textarea name="short_details" class="form_input" id="short_details" cols="6" rows="8"
+                                required><?php echo $data->short_details; ?></textarea>
+                        </div>
+
+                        <div class="form-grp">
+                            <label>Description</label><br>
+                            <textarea name="description" class="form_input" id="details" cols="6" rows="8"
+                                required><?php echo $data->description; ?></textarea>
                         </div>
 
                         <div class="form-grp">
                             <label>Nutritional Information</label><br>
-                            <textarea name="nutritional_info" class="form_input"
-                                value="<?php echo $data->nutritional_info; ?>" cols="6" rows="8" required></textarea>
+                            <textarea name="nutritional_info" id="nutritional_info" class="form_input" cols="6" rows="8"
+                                required><?php echo $data->nutritional_info; ?></textarea>
+                            <script>
+                                ClassicEditor
+                                    .create(document.querySelector('#nutritional_info'))
+                                    .catch(error => {
+                                        console.error(error);
+                                    });
+                            </script>
                         </div>
 
                         <div class="form-grp" enctype="multipart/form-data">
@@ -175,21 +188,21 @@ include ('sidebar.php');
                         </div>
 
                         <div class="form-grp">
-                            <label for="category">Category</label><br>
-                            <?php foreach ($categoryList as $category): ?>
-                                <input type="checkbox" id="category_<?php echo $category['id']; ?>" name="category[]"
-                                    value="<?php echo $category['id']; ?>" required>
-                                <label
-                                    for="category_<?php echo $category['id']; ?>"><?php echo $category['name']; ?></label><br>
-                            <?php endforeach; ?>
+                            <label>Category</label>
+                            <br>
+                            <?php print_r($categori); ?>
+                            <?php foreach ($categoryList as $category => $value) { ?>
+                                <?php echo $value['id']; ?>
+                                <input type="checkbox" id="category_<?php echo $value['id']; ?>" name="category[]"
+                                    value="<?php echo $value['id']; ?>" <?php if (in_array($value['id'], $categori))
+                                           echo 'checked';
+                                       ?>required>
+                                <label><?php echo $value['name']; ?></label><br>
+                            <?php } ?>
                         </div>
 
 
-                        <div class="form-grp">
-                            <label>Keywords</label><br>
-                            <textarea name="keywords" class="form_input" cols="6" rows="8"
-                                value="<?php echo $data->keywords; ?>" required></textarea>
-                        </div>
+
 
 
                         <button type="submit" name="submit" value="submit" class="success"> Submit Button</button>
@@ -199,7 +212,16 @@ include ('sidebar.php');
             </div>
         </div>
     </div>
+    <script>
+        function ckeditor(class) {
 
+            ClassicEditor
+                .create(document.querySelector(class))
+                .catch(error => {
+                    console.error(error);
+                });
+        }
+    </script>
 </body>
 
 </html>
