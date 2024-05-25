@@ -147,9 +147,13 @@ if (isset($_POST['submit'])) {
                                 <label for="detail">Preparation Instruction</label><br>
                                 <textarea id="instruction" name="instructions" class="form_input" cols="60" rows="30"
                                     required></textarea>
-                                \
+
                                 <script>
-                                    ckeditor("#instruction");
+                                    ClassicEditor
+                                        .create(document.querySelector('#instruction'))
+                                        .catch(error => {
+                                            console.error(error);
+                                        });
                                 </script>
                             </div>
                             <div class="form-grp">
@@ -169,7 +173,11 @@ if (isset($_POST['submit'])) {
                                 <textarea name="nutritional_info" id="nutritional_info" class="form_input" cols="6"
                                     rows="8" required></textarea>
                                 <script>
-                                    ckeditor("#nutritional_info");
+                                    ClassicEditor
+                                        .create(document.querySelector('#nutritional_info'))
+                                        .catch(error => {
+                                            console.error(error);
+                                        });
                                 </script>
                             </div>
                         </div>

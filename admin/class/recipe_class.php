@@ -2,13 +2,13 @@
 require_once ('common_class.php');
 class Recipe extends Common
 {
-    public $id, $recipe_name, $total_time, $preparation_time, $cooking_time, $cooking_level, $serving, $details, $ingredients, $instructions, $short_details, $description, $nutritional_info, $image, $category, $created_date, $modified_date;
+    public $id, $recipe_name, $total_time, $preparation_time, $cooking_time, $cooking_level, $serving, $ingredients, $instructions, $short_details, $description, $nutritional_info, $image, $category, $created_date, $modified_date;
 
     public function save()
     {
         $conn = mysqli_connect('localhost', 'root', '', 'sem_project');
-        $sql = "insert into recipe (recipe_name, total_time, preparation_time, cooking_time, cooking_level, serving, details, ingredients, instructions, short_details, description, nutritional_info, image, category, created_date, modified_date) 
-        values ('$this->recipe_name', '$this->total_time', '$this->preparation_time', '$this->cooking_time', '$this->cooking_level', '$this->serving', '$this->details', '$this->ingredients', '$this->instructions', '$this->short_details', '$this->description', '$this->nutritional_info', '$this->image', '$this->category', '$this->created_date', '$this->modified_date')";
+        $sql = "insert into recipe (recipe_name, total_time, preparation_time, cooking_time, cooking_level, serving, ingredients, instructions, short_details, description, nutritional_info, image, category, created_date, modified_date) 
+        values ('$this->recipe_name', '$this->total_time', '$this->preparation_time', '$this->cooking_time', '$this->cooking_level', '$this->serving', '$this->ingredients', '$this->instructions', '$this->short_details', '$this->description', '$this->nutritional_info', '$this->image', '$this->category', '$this->created_date', '$this->modified_date')";
         if ($conn->query($sql)) {
             return $conn->insert_id;
         } else {
@@ -32,7 +32,7 @@ class Recipe extends Common
     public function edit()
     {
         $conn = mysqli_connect('localhost', 'root', '', 'sem_project');
-        $sql = "update recipe SET recipe_name = '$this->recipe_name', cooking_time = '$this->cooking_time', cooking_level = '$this->cooking_level',  serving = '$this->serving', details = '$this->details' ,ingredients = '$this->ingredients', instructions = '$this->instructions', short_details = '$this->short_details', description = '$this->description',nutritional_info = '$this->nutritional_info', image = '$this->image' , category = '$this->category', created_date = '$this->created_date', modified_date = '$this->modified_date' WHERE id = '$this->id'";
+        $sql = "update recipe SET recipe_name = '$this->recipe_name', total_time = '$this->total_time',preparation_time = '$this->preparation_time', cooking_time = '$this->cooking_time', cooking_level = '$this->cooking_level',  serving = '$this->serving',ingredients = '$this->ingredients', instructions = '$this->instructions', short_details = '$this->short_details', description = '$this->description',nutritional_info = '$this->nutritional_info', image = '$this->image' , category = '$this->category', created_date = '$this->created_date', modified_date = '$this->modified_date' WHERE id = '$this->id'";
         $conn->query($sql);
         if ($conn->affected_rows == 1) {
             return $this->id;
@@ -84,7 +84,7 @@ class Recipe extends Common
     public function breakfast()
     {
         $conn = mysqli_connect('localhost', 'root', '', 'sem_project');
-        $sql = "SELECT * FROM recipe r JOIN category c ON r.category = c.id WHERE c.name = 'Breakfast'";
+        $sql = "select * from recipe where category = 19";
         $var = $conn->query($sql);
         if ($var->num_rows > 0) {
             $datalist = $var->fetch_all(MYSQLI_ASSOC);
@@ -97,7 +97,7 @@ class Recipe extends Common
     public function lunch()
     {
         $conn = mysqli_connect('localhost', 'root', '', 'sem_project');
-        $sql = "SELECT * FROM recipe r JOIN category c ON r.category = c.id WHERE c.name = 'Lunch'";
+        $sql = "select * from recipe where category = 20";
         $var = $conn->query($sql);
         if ($var->num_rows > 0) {
             $datalist = $var->fetch_all(MYSQLI_ASSOC);
@@ -111,7 +111,7 @@ class Recipe extends Common
     public function snacks()
     {
         $conn = mysqli_connect('localhost', 'root', '', 'sem_project');
-        $sql = "SELECT * FROM recipe r JOIN category c ON r.category = c.id WHERE c.name = 'Snacks'";
+        $sql = "select * from recipe where category = 21";
         $var = $conn->query($sql);
         if ($var->num_rows > 0) {
             $datalist = $var->fetch_all(MYSQLI_ASSOC);
@@ -123,12 +123,12 @@ class Recipe extends Common
     public function dinner()
     {
         $conn = mysqli_connect('localhost', 'root', '', 'sem_project');
-        $sql = "SELECT * FROM recipe r JOIN category c ON r.category = c.id WHERE c.name = 'Dinner'";
+        $sql = "select * from recipe where category = 22";
         $var = $conn->query($sql);
         if ($var->num_rows > 0) {
             $datalist = $var->fetch_all(MYSQLI_ASSOC);
-            // return $datalist;
-            print_r($datalist);
+            return $datalist;
+            // print_r($datalist);
         } else {
             return false;
         }
@@ -138,7 +138,7 @@ class Recipe extends Common
     public function desert()
     {
         $conn = mysqli_connect('localhost', 'root', '', 'sem_project');
-        $sql = "SELECT * FROM recipe r JOIN category c ON r.category = c.id WHERE c.name = 'Desert'";
+        $sql = "select * from recipe where category = 23";
         $var = $conn->query($sql);
         if ($var->num_rows > 0) {
             $datalist = $var->fetch_all(MYSQLI_ASSOC);

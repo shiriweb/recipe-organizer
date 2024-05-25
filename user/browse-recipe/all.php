@@ -29,7 +29,7 @@ $datalist = $recipeObj->retrieve();
                 <?php echo $recipe['short_details']; ?>
             </div>
             <div class="learn">
-                <a href="learn-recipe.php?id=<?php echo $recipe['id'];?>">Learn More<i class="fas fa-arrow-right"></i>
+                <a href="learn-recipe.php?id=<?php echo $recipe['id'];?>" target="_blank">Learn More<i class="fas fa-arrow-right"></i>
                 </a>
             </div>
         </div>

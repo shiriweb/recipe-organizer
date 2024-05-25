@@ -53,7 +53,7 @@ body {
     font-weight: bold;
     color: red;
     position: absolute;
-    margin: 22px 0px 0px 60px;
+    margin: 22px 0px 0px 47px;
 }
 
 .navigation {
@@ -126,7 +126,7 @@ nav a:hover {
 }
 
 .content .content1 .paragraph {
-    margin-top: 75px;
+    margin-top: 48px;
     margin-left: 82px;
 }
 
@@ -369,3 +369,6 @@ big {
     /* font-weight: bold; */
     font-size: 15px;
 }
+
+
+

@@ -22,6 +22,8 @@ if (isset($_GET['id'])) {
 
     if (isset($_POST['submit'])) {
         $recipe->set('recipe_name', $_POST['recipe_name']);
+        $recipe->set('total_time', $_POST['total_time']);
+        $recipe->set('preparation_time', $_POST['preparation_time']);
         $recipe->set('cooking_time', $_POST['cooking_time']);
         $recipe->set('cooking_level', $_POST['cooking_level']);
         $recipe->set('serving', $_POST['serving']);
@@ -58,7 +60,7 @@ if (isset($_GET['id'])) {
             $error['msg'] = "Error occured!";
         }
     } else {
-        $error['msg'] = "Please fill all the field";
+        // $error['msg'] = "Please fill all the field";
     }
 }
 
@@ -112,10 +114,19 @@ include ('sidebar.php');
                         </div>
 
                         <div class="form-grp">
-                            <label>Cooking Time</label><br>
-                            <input type="text" class="form_input" name="cooking_time" id="cooking_time"
-                                value="<?php echo $data->cooking_time; ?>" required>
-                        </div>
+                                <label>Total Time</label><br>
+                                <input type="text" class="form_input" name="cooking_time" id="cooking_time" value="<?php echo $data->total_time; ?>" required>
+                            </div>
+
+                            <div class="form-grp">
+                                <label>Preparation Time</label><br>
+                                <input type="text" class="form_input" name="cooking_time" id="cooking_time" value="<?php echo $data->preparation_time; ?>" required>
+                            </div>
+
+                            <div class="form-grp">
+                                <label>Cooking Time</label><br>
+                                <input type="text" class="form_input" name="cooking_time" id="cooking_time" value="<?php echo $data->cooking_time; ?>" required>
+                            </div>
 
                         <div class="form-grp">
                             <label>Cooking Level</label><br>
@@ -190,9 +201,9 @@ include ('sidebar.php');
                         <div class="form-grp">
                             <label>Category</label>
                             <br>
-                            <?php print_r($categori); ?>
+                            <!-- <?php print_r($categori); ?> -->
                             <?php foreach ($categoryList as $category => $value) { ?>
-                                <?php echo $value['id']; ?>
+                                <!-- <?php echo $value['id']; ?> -->
                                 <input type="checkbox" id="category_<?php echo $value['id']; ?>" name="category[]"
                                     value="<?php echo $value['id']; ?>" <?php if (in_array($value['id'], $categori))
                                            echo 'checked';
@@ -200,11 +211,6 @@ include ('sidebar.php');
                                 <label><?php echo $value['name']; ?></label><br>
                             <?php } ?>
                         </div>
-
-
-
-
-
                         <button type="submit" name="submit" value="submit" class="success"> Submit Button</button>
                         <button type="reset" class="danger"> Reset Button</button>
                     </fieldset>
@@ -212,16 +218,7 @@ include ('sidebar.php');
             </div>
         </div>
     </div>
-    <script>
-        function ckeditor(class) {
 
-            ClassicEditor
-                .create(document.querySelector(class))
-                .catch(error => {
-                    console.error(error);
-                });
-        }
-    </script>
 </body>
 
 </html>

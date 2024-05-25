@@ -15,7 +15,7 @@
 </html>
 <div class="header">
     <div class="logo">
-        <span class="first-title"><a href="index.php">Thee</span></a>
+        <span class="first-title"><a href="index.php">The</span></a>
         <span class="second-title"><a href="index.php">Taste</span></a>
     </div>
     <div class="navigation">
