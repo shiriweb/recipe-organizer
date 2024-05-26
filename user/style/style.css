@@ -103,8 +103,51 @@ nav a:hover {
     position: absolute;
     width: 265px;
     top: 40px;
+    max-height: 200px;
     z-index: 1;
 }
+
+/* search bar */
+.search-result {
+    display: none;
+    overflow: auto;
+    padding: 5px;
+    max-height: 300px;
+    position: absolute;
+    z-index: 2;
+    background: #eee;
+    width: 340px;
+    top: 35px;
+    scrollbar-width: thin;
+    border-radius: 5px;  }
+  
+  .search-data {
+    text-decoration: none;
+    display: flex;
+    padding: 5px;
+    border-radius: 5px;
+  }
+  
+  .search-data:hover {
+    background: #c9c5c5;
+  }
+  
+  .search-data-image > .search-img {
+    vertical-align: middle;
+    height: 4rem;
+    object-fit: cover;
+    width: 2.6rem;
+  }
+  
+  .search-data-title {
+    padding: 0px 0 0 10px;
+  }
+  
+  .sub-text {
+    color: #8d8d8d;
+  }
+  
+
 .signup {
     top: 0;
     width: 25%;

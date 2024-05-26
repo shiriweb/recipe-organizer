@@ -1,7 +1,7 @@
 <?php
 class User
 {
-    public $user_id, $username, $email, $password, $con_password, $created_date, $token, $expiretoken;
+    public $user_id, $username, $email, $password, $searchData, $con_password, $created_date, $token, $expiretoken;
 
 
     public function set($property, $value)
@@ -59,6 +59,17 @@ class User
         }
     }
 
+    public function search()
+    {
+        $conn = mysqli_connect('localhost', 'root', '', 'sem_project');
+        $sql = "select * from recipe where recipe_name like '{$this->searchData}%';";
 
-
+        $var = $conn->query($sql);
+        if ($var->num_rows > 0) {
+            $row = $var->fetch_all(MYSQLI_ASSOC);
+            return $row;
+        } else {
+            return false;
+        }
+    }
 }
