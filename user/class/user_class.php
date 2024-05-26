@@ -36,9 +36,12 @@ class User
         if ($result->num_rows > 0) {
             $data = $result->fetch_object();
             session_start();
-            $_SESSION['id'] = $data->id;
+            $_SESSION['id'] = $data->user_id;
             $_SESSION['username'] = $data->username;
             setcookie('username', $data->username, time() + 60 * 60);
+            // echo "<pre>";
+            // print_r($data);
+            // echo "</pre>";
             header('location:index.php');
         } else {
             $error = "Invalid Information";
