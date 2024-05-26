@@ -16,21 +16,25 @@ if (isset($_POST['submit'])) {
     }
     if (count($error) < 1) {
         $result = $userObject->login();
+        if(!$result){
+            $error['msg'] = "Invalid Credentials";
+        }
     }
 }
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Panel</title>
     <link rel="stylesheet" href="../style/login.css">
     <style>
-        label.error {
-            color: red;
-        }
+    label.error {
+        color: red;
+    }
     </style>
 
 </head>
@@ -52,7 +56,7 @@ if (isset($_POST['submit'])) {
                         }
                         ?>
                         <?php if (isset($error['msg']) && !empty($error['msg'])) { ?>
-                            <label class="error"><?php echo $error['msg']; ?></label>
+                        <label class="error"><?php echo $error['msg']; ?></label>
                         <?php } ?>
 
                         <div class="form-grp">

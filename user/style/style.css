@@ -56,6 +56,12 @@ body {
     margin: 22px 0px 0px 47px;
 }
 
+.third-title {
+    margin-left: 30px;
+    margin-top: 52px;
+    position: absolute;
+}
+
 .navigation {
     display: flex;
     width: 100%;
@@ -97,7 +103,7 @@ nav a:hover {
     position: absolute;
     width: 265px;
     top: 40px;
-
+    z-index: 1;
 }
 .signup {
     top: 0;
