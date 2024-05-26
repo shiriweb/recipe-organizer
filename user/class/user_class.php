@@ -39,7 +39,7 @@ class User
             $_SESSION['id'] = $data->id;
             $_SESSION['username'] = $data->username;
             setcookie('username', $data->username, time() + 60 * 60);
-            header('location:feedback.php');
+            header('location:index.php');
         } else {
             $error = "Invalid Information";
             return $error;

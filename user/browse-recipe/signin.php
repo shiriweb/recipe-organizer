@@ -13,30 +13,27 @@ if (isset($_POST['submit'])) {
     if (isset($username) && !empty($username)) {
         $userObject->username = $username;
     } else {
-        $error['msg'] = "Username is required";
+        $error['msg'] = "All fields are required";
     }
     if (isset($email) && !empty($email)) {
         $userObject->email = $email;
     } else {
-        $error['msg'] = "Email is required";
+        $error['msg'] = "All fields are required";
     }
     if (isset($pass1) && !empty($pass1)) {
         $userObject->password = $pass1;
     } else {
-        $error['msg'] = "Password is required ";
+        $error['msg'] = "All fields are required";
     }
     if (isset($pass2) && !empty($pass2)) {
         $userObject->con_password = $pass2;
     } else {
-        $error['msg'] = "Confirmation Password is required ";
+        $error['msg'] = "All fields are required";
     }
     $userObject->set('created_date', date('Y-m-d H:i:s'));
 
-
     if (count($error) < 1) {
         $status = $userObject->signup();
-    } else {
-        $error['msg'] = "Try again...";
     }
 }
 ?>
@@ -53,12 +50,6 @@ if (isset($_POST['submit'])) {
     <title>Admin Panel</title>
     <link rel="stylesheet" href="../style/login.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-
-    <style>
-        label.error {
-            color: red;
-        }
-    </style>
 
 </head>
 
@@ -77,7 +68,7 @@ if (isset($_POST['submit'])) {
                     ?>
 
                     <?php if (isset($error['msg']) && !empty($error['msg'])) { ?>
-                        <label class="error" style='color:purple;'><?php echo $error['msg']; ?></label>
+                        <label class="error" style='color:red;'><?php echo $error['msg']; ?></label>
                     <?php } ?>
 
                     <div class="form-grp">

@@ -31,10 +31,6 @@ $datalist = $recipeObj->recentlyAdded();
 
                 <div class="recipe-image">
                     <img class="image_recipe" src="../../admin/images/<?php echo $recipe['image']; ?>">
-
-                    <!-- <div class="information">
-                        <span><i class="fas fa-clock"><?php echo $recipe['cooking_time']; ?></i><span>
-                    </div> -->
                 </div>
                 <div class="recipe-title">
                     <h1><?php echo $recipe['recipe_name']; ?></h1>
@@ -43,7 +39,8 @@ $datalist = $recipeObj->recentlyAdded();
                     <?php echo $recipe['short_details']; ?>
                 </div>
                 <div class="learn">
-                    <a href="learn-recipe.php?id=<?php echo $recipe['id']?>">Learn More<i class="fas fa-arrow-right"></i>
+                    <a href="learn-recipe.php?id=<?php echo $recipe['id'] ?>" target="_blank">Learn More <i
+                            class="fas fa-arrow-right"></i>
                     </a>
                 </div>
             </div>

@@ -16,8 +16,6 @@ if (isset($_POST['submit'])) {
     }
     if (count($error) < 1) {
         $result = $userObject->login();
-    } else {
-        $error['msg'] = "Try again......";
     }
 }
 ?>

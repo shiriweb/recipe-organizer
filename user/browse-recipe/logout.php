@@ -1,5 +1,6 @@
 <?php
 session_start();
 session_destroy();
+// unset($_SESSION['username']);
 setcookie('username', '', Time() - 60 * 60);
-header('locstion: ../index.php');
+header('location: index.php');
