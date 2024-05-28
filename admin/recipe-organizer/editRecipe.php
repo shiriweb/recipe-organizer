@@ -20,7 +20,7 @@ if (isset($_GET['id'])) {
     // print_r($categoryList);
     // echo "</pre>";
 
-    if (isset($_POST['submit'])) {
+    if (isset($_POST['submit'])){
         $recipe->set('recipe_name', $_POST['recipe_name']);
         $recipe->set('total_time', $_POST['total_time']);
         $recipe->set('preparation_time', $_POST['preparation_time']);

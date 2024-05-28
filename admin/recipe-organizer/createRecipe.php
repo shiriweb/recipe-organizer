@@ -10,7 +10,8 @@ $categoryList = $category->retrieve();
 $recipe = new Recipe();
 
 @session_start();
-if (isset($_POST['submit'])) {
+
+if (isset($_POST['submit'])){
     $recipe->set('recipe_name', $_POST['recipe_name']);
     $recipe->set('total_time', $_POST['cooking_time']);
     $recipe->set('preparation_time', $_POST['cooking_time']);
