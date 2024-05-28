@@ -15,7 +15,7 @@
 
     <div class="header">
         <div class="left-panel">
-            <a href="dashboard.php" class="dash">Admin Panel</a>
+            <a href="listCategory.php" class="dash">Admin Panel</a>
         </div>
         <div class="right-panel">
             <button>

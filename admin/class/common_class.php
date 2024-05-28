@@ -12,17 +12,4 @@ abstract class Common
         $this->$property = $value;
     }
 
-
-    public function select($sql)
-    {
-        $conn = mysqli_connect('localhost', 'root', '', 'sem_project');
-        $var = $conn->query($sql);
-        if ($var->num_rows > 0) {
-            $datalist = $var->fetch_all(MYSQLI_ASSOC);
-            return $datalist;
-        } else {
-            return false;
-        }
-
-    }
 }

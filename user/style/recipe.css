@@ -56,7 +56,7 @@ body {
 .recipes {
     /* width: 100%; */
     margin-top: 150px;
-    margin-left: 60px;
+    margin-left: 70px;
     display: flex;
     flex-wrap: wrap;
 }
@@ -135,16 +135,15 @@ body {
     width: 95%;
     /* background-color: #bbcbd4; */
     background-color: #dee0d6;
-    margin: 10px 0px 0px 34px;
+    margin: 20px 0px 0px 34px;
 }
-
 
 
 .recipe-details .learn-content {
     display: flex;
     width: 90%;
     /* background-color: yellowgreen; */
-    margin: 0px 0px 0px 10px;
+    margin: 20px 0px 0px 60px;
 }
 .learn-content h1 {
     font-size: 40px;

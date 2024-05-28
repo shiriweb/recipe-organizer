@@ -1,5 +1,4 @@
 <?php
-
 class Admin
 {
     public $id, $name, $username, $email, $password,
@@ -20,7 +19,7 @@ class Admin
             $_SESSION['username'] = $data->username;
             $_SESSION['role'] = $data->role;
             setcookie('username', $data->username, time() + 60 * 60);
-            header('location:recipe-organizer/dashboard.php');
+            header('location:recipe-organizer/listCategory.php');
         } else {
             $error = "Invalid Credentials!";
             return $error;

@@ -22,7 +22,6 @@ $datalist = $recipeObj->recentlyAdded();
     <div class="recipe-container">
         <h1>Recently <small>Added</small> Recipes</h1>
         <hr>
-        <!-- <h1>Delve into <small>Flavor</small> and explore Our <small>recipe</small> Library</h1> -->
 
     </div>
     <div class="recipes">

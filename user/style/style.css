@@ -60,6 +60,9 @@ body {
     margin-left: 30px;
     margin-top: 52px;
     position: absolute;
+    font-size: 10px;
+    font-style: 'oswald';
+    color: grey;
 }
 
 .navigation {

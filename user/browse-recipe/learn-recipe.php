@@ -38,10 +38,11 @@ if (isset($_GET['id'])) {
         <?php foreach ($datalist as $key => $recipe) { ?>
 
             <div class="learn-content">
+              
+                <div class="description">
                 <div class="recipe-title">
                     <h1><?php echo $recipe['recipe_name']; ?></h1>
                 </div>
-                <div class="description">
                     <p><?php echo $recipe['description']; ?></p>
                 </div>
                 <div class="recipe-image">
@@ -86,7 +87,7 @@ if (isset($_GET['id'])) {
             </div>
         <?php } ?>
     </div>
-    <div class="comment-section">
+    <!-- <div class="comment-section">
         <div class="comments-gallery">
             <div class="comments">
                 <div class="write-comment">
@@ -95,9 +96,9 @@ if (isset($_GET['id'])) {
                         <div class="submit-area">
                             <input type="hidden" name="id" id="recipe_id" value="<?php echo $id; ?>">
                             <input type="hidden" name="parent_id" id="parent_id" value="0">
-                            <?php if (isset($_SESSION['id'])) { ?>
+                            <?//php if (isset($_SESSION['id'])) { ?>
                                 <input type="hidden" name="user_id" id="user_id" value="<?php echo $_SESSION['id'];  ?>">
-                            <?php } ?>
+                            <?php// } ?>
                             <button type="submit" id="submit_comment_btn" class="submit-comment-btn">Comment</button>
                         </div>
                     </form>
@@ -107,8 +108,8 @@ if (isset($_GET['id'])) {
                 </div>
             </div>
         </div>
-    </div>
-    <script>
+    </div> -->
+    <!-- <script>
         $(document).ready(function() {
             //comment button
             $(document).on('focus', '.write-comment', function() {
@@ -258,4 +259,4 @@ if (isset($_GET['id'])) {
     </script>
 </body>
 
-</html>
+</html> -->

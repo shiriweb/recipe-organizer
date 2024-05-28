@@ -1,5 +1,5 @@
 <?php
-// include ('header.php');
+include ('header.php');
 include ('sidebar.php');
 include ('../class/category_class.php');
 include ('../class/recipe_class.php');
@@ -205,16 +205,7 @@ if (isset($_POST['submit'])) {
         </fieldset>
         </form>
     </div>
-    <script>
-        function ckeditor(class) {
 
-            ClassicEditor
-                .create(document.querySelector('class'))
-                .catch(error => {
-                    console.error(error);
-                });
-        }
-    </script>
 </body>
 
 </html>

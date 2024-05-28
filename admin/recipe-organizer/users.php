@@ -4,7 +4,7 @@ include ('../../user/class/user_class.php');
 @session_start();
 if (isset($_SESSION['message']) && $_SESSION['message'] != "") {
     $message = $_SESSION['message'];
-    $_SESSION['message'] = "Hello";
+    $_SESSION['message'] = "";
 }
 
 $userObj = new User();
@@ -37,7 +37,7 @@ include ('sidebar.php');
                         <th>Username</th>
                         <th>Email</th>
                         <th>Created Date</th>
-                        <th>Action</th>
+                        <!-- <th>Action</th> -->
                     </tr>
                 </thead>
                 <tbody>
@@ -47,14 +47,7 @@ include ('sidebar.php');
                             <td><?php echo $user['username']; ?></td>
                             <td><?php echo $user['email']; ?></td>
                             <td><?php echo $user['created_date']; ?></td>
-
-                            <td class="action">
-                                <a class="delete" href="deleteCategory.php ? id=<?php echo $user['user_id']; ?>">
-                                    <i class="fas fa-trash"></i> Delete</a>
-
-                            </td>
                         </tr>
-
                     <?php } ?>
                 </tbody>
             </table>

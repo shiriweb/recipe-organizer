@@ -1,18 +1,9 @@
 <?php
 include ('../../admin/class/aboutus_class.php');
-
-
-@session_start();
-if (isset($_SESSION['message']) && $_SESSION['message'] = !"") {
-    $message = $_SESSION['message'];
-    $_SESSION['message'] = "";
-}
-
 $about = new About();
 $datalist = $about->retrieve();
 
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 

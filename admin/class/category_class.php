@@ -73,7 +73,5 @@ class Category extends Common
             return $error;
         }
     }
-
-
 }
 

@@ -110,7 +110,7 @@ include ('sidebar.php');
                         <div class="form-grp">
                             <label>Recipe Name</label><br>
                             <input type="text" class="form_input" name="recipe_name" id="recipe_name"
-                                value="<?php echo $data->recipe_name; ?>" required>
+                                value="<?php echo $data->recipe_name;?>" required>
                         </div>
 
                         <div class="form-grp">

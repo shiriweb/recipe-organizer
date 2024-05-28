@@ -44,7 +44,7 @@
             <p>We are passionate about celebrating the rich culinary heritage of Nepal and bringing its flavors to your kitchen. Let us cook, share, and savor the flavors of Nepal together.</p>
             <!-- <h1>Journey Through <small>Nepal's</small> Culinary Tapestry: Where Every Bite Tells a Story!</h1> -->
             <!-- <a href="learn_more">Learn More<i class="fas fa-arrow-right"></i></a> -->
-        </div> -->
+        </div>
    
     </div>
 </body>

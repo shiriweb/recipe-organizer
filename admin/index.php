@@ -1,7 +1,7 @@
 <?php
 @session_start();
 if (array_key_exists('username', $_SESSION) && array_key_exists('username', $_COOKIE)) {
-    header('Location:recipe-organizer/dashboard.php');
+    header('Location:recipe-organizer/listCategory.php');
 }
 
 include ('class/admin_class.php');
@@ -23,7 +23,6 @@ if (isset($_POST['submit'])) {
         $status = $adminObject->login();
     }
 }
-
 ?>
 
 <!DOCTYPE html>
@@ -43,7 +42,7 @@ if (isset($_POST['submit'])) {
             <form action="" method="post" novalidate>
                 <fieldset>
                     <div class="title">
-                        <h3>Welcome Back</h3>
+                        <h3>Admin Login</h3>
                     </div>
 
                     <!-- error msg print -->
@@ -65,17 +64,13 @@ if (isset($_POST['submit'])) {
                     <div class="form-grp">
                         <label>Password</label>
                         <input type="password" name="password" type="password" required>
-                        <br>
-                        <a href="recipe-organizer/change_pw.php" class="forgot-password">Change Password?</a>
+                        <!-- <br> -->
+                        <!-- <a href="recipe-organizer/change_pw.php" class="forgot-password">Change Password?</a> -->
                     </div>
                     <button type="submit" name="submit" value="Log In">Login</button>
-
-
                 </fieldset>
             </form>
         </div>
     </div>
-
 </body>
-
 </html>

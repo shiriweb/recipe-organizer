@@ -7,12 +7,12 @@ if (isset($_POST['submit'])) {
     if (isset($_POST['email']) && !empty($_POST['email'])) {
         $userObject->email = $_POST['email'];
     } else {
-        $error['msg'] = "Email is required";
+        $error['msg'] = "All fields are required";
     }
     if (isset($_POST['password']) && !empty($_POST['password'])) {
         $userObject->password = $_POST['password'];
     } else {
-        $error['msg'] = "Password is required";
+        $error['msg'] = "All fields are required";
     }
     if (count($error) < 1) {
         $result = $userObject->login();
@@ -71,7 +71,7 @@ if (isset($_POST['submit'])) {
                         <p>Don't have an account?
                             <a href="signin.php" class="signup">Sign up</a>
                         </p>
-                        <a href="reset_password.php" class="forgot-password">Forgot Password?</a>
+                        <!-- <a href="reset_password.php" class="forgot-password">Forgot Password?</a> -->
 
                 </fieldset>
             </form>
