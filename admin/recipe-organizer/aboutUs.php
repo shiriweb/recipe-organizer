@@ -1,6 +1,6 @@
 <?php
 include ('header.php');
-// include('sidebar.php');
+include('sidebar.php');
 include ('../class/aboutus_class.php');
 
 $about = new About();
