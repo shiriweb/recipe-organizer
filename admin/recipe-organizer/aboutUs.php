@@ -12,7 +12,7 @@ if (isset($_POST['submit'])) {
     $about->set('short_detail', $_POST['short_detail']);
     $about->set('created_date', date('Y-m-d H:i:s'));
 
-    if (isset($_FILES['image'])) {
+    if (isset($_FILES['image'])){
         $file_name = $_FILES['image']['name'];
         $file_size = $_FILES['image']['size'];
         $file_tmp = $_FILES['image']['tmp_name'];
