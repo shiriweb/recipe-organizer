@@ -10,6 +10,7 @@ if (isset($_SESSION['message']) && $_SESSION['message'] != "") {
 $categoryObj = new Category();
 $datalist = $categoryObj->retrieve();
 
+
 include ('sidebar.php');
 ?>
 

@@ -8,6 +8,7 @@ if (isset($_SESSION['message']) && $_SESSION['message'] != "") {
 }
 
 $userObj = new User();
+
 $datalist = $userObj->retrieve();
 
 // echo "<pre>";
