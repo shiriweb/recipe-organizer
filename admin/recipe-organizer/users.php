@@ -21,7 +21,7 @@ include ('sidebar.php');
 <div class="category">
     <div class="row">
         <div class="heading">
-            <p>List of Users</p>
+            <p>List of Users </p>
         </div>
     </div>
     <?php
@@ -33,6 +33,7 @@ include ('sidebar.php');
         <div class="headings">
             <table id="categorytable">
                 <thead>
+                    
                     <tr>
                         <th>S.No</th>
                         <th>Username</th>
