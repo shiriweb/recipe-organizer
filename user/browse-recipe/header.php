@@ -14,6 +14,10 @@ if (isset($_SESSION['username']) && isset($_COOKIE['username'])) {
     <title>Document</title>
     <!-- <script src="jquery-3.7.1.min.js"></script> -->
     <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../style/recipe.css">
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
@@ -47,7 +51,7 @@ if (isset($_SESSION['username']) && isset($_COOKIE['username'])) {
         <?php if (!empty($_SESSION['username'])) { ?>
 
             <div class="signup">
-                <a href="#" class=""><i class="fas fa-heart wishlist"></i></a>
+                <a href="wishlist.php" class=""><i class="fas fa-heart wishlist"></i></a>
                 <a href="logout.php" class="nav" id="log-in">Log Out</a>
             </div>
         <?php } else { ?>

@@ -1,25 +1,44 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php
+include('header.php');
+include('../class/wishlist_class.php');
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-</head>
+$wishlist = new Wishlist();
 
-<body>
-    <!-- first layout -->
-    <div class="banner">
-        <?php
-        include ('header.php');
-        ?>
-        
-    <div class="footer">
-        <?php
-        include ('footer.php');
-        ?>
+?>
+    
+
+<div class="container">
+    <div class="box-main">
+        <input type="hidden" name="user_id" id="user_id" value="<?php echo $_SESSION['id']; ?>">
+
+        <div class="show">
+
+        </div>
+
     </div>
-</body>
+</div>
+<?php include('footer.php'); ?>
+<script>
+    $(document).ready(function(e) {
+        function fetchWishlist() {
+            var user_id = $('#user_id').val();
+            console.log(user_id);
+            $.ajax({
+                url: 'checkWishlist.php',
+                method: 'POST',
+                data: {
+                    user_id: user_id
+                },
+                success: function(response) {
+                    $('.show').append(response);
+                    console.log(response);
+                },
+                error: function(xhr, status, error) {
+                    console.log('error:', error);
+                }
+            });
+        }
 
-</html>
+        fetchWishlist();
+    });
+</script>
