@@ -34,7 +34,6 @@ if (isset($_GET['id'])) {
         $recipe->set('nutritional_info', $_POST['nutritional_info']);
         $categories = implode(',', $_POST['category']);
         $recipe->set('category', $categories);
-        $recipe->set('keywords', $_POST['keywords']);
         $recipe->set('created_date', date('Y-m-d H:i:s'));
 
         if (isset($_FILES['image'])) {
@@ -54,15 +53,14 @@ if (isset($_GET['id'])) {
 
         $result = $recipe->edit();
 
-        if (is_integer($result)) {
-            $msg = "Updated Successfully";
+        if ($result !== false){
+            $msg = "Recipe Updated Successfully";
         } else {
-            $error['msg'] = "Error occured!";
+            $error['msg'] = "Recipe cannot be updated";
         }
-    } else {
-        // $error['msg'] = "Please fill all the field";
-    }
+    } 
 }
+
 
 
 include ('sidebar.php');
@@ -115,12 +113,12 @@ include ('sidebar.php');
 
                         <div class="form-grp">
                                 <label>Total Time</label><br>
-                                <input type="text" class="form_input" name="cooking_time" id="cooking_time" value="<?php echo $data->total_time; ?>" required>
+                                <input type="text" class="form_input" name="total_time" id="cooking_time" value="<?php echo $data->total_time; ?>" required>
                             </div>
 
                             <div class="form-grp">
                                 <label>Preparation Time</label><br>
-                                <input type="text" class="form_input" name="cooking_time" id="cooking_time" value="<?php echo $data->preparation_time; ?>" required>
+                                <input type="text" class="form_input" name="preparation_time" id="cooking_time" value="<?php echo $data->preparation_time; ?>" required>
                             </div>
 
                             <div class="form-grp">
@@ -195,7 +193,7 @@ include ('sidebar.php');
 
                         <div class="form-grp" enctype="multipart/form-data">
                             <label> Image</label><br>
-                            <input type="file" name="image" value="<?php echo $data->image; ?>" required>
+                            <input type="file" name="image" value="../images/<?php echo htmlspecialchars($data->image);?>" required>
                         </div>
 
                         <div class="form-grp">

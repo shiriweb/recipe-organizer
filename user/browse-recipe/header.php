@@ -41,12 +41,12 @@ if (isset($_SESSION['username']) && isset($_COOKIE['username'])) {
                 <a href="aboutLearn.php" class="nav">About </a>
             </nav>
         </div>
-        <div class="search-bar">
+        <!-- <div class="search-bar">
             <input id="search" class="search" type="text" placeholder="Search Here">
             <div class="search-result">
                
             </div>
-        </div>
+        </div> -->
 
         <?php if (!empty($_SESSION['username'])) { ?>
 

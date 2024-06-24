@@ -19,7 +19,19 @@ $datalist = $recipeObj->retrieve();
 
 ?>
 
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .action{
+            display: flex;
+        }
+    </style>
+</head>
+<body>
 <div class="recipe">
     <div class="row">
         <div class="heading">
@@ -68,11 +80,11 @@ $datalist = $recipeObj->retrieve();
                                 <td class="action">
                                     <div>
                                         <a class="edit" href="editRecipe.php ? id=<?php echo $recipe['id']; ?>"> <i
-                                                class="fas fa-edit"></i> </a>
+                                                class="fas fa-edit"></i></a>
                                     </div>
                                     <div>
                                         <a class="delete" href="deleteRecipe.php ? id=<?php echo $recipe['id']; ?>"> <i
-                                                class="fas fa-trash"></i> </a>
+                                                class="fas fa-trash"></i></a>
                                     </div>
                                 </td>
                             </tr>
@@ -80,36 +92,9 @@ $datalist = $recipeObj->retrieve();
                     </div>
                 </tbody>
             </table>
-            <div class="pagination">
-                <a href="" class="active"></a>
-            </div>
         </div>
     </div>
 </div>
 
-
-
-<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
-<!-- <script type="text/javascript" src="jquery/jquery.js"></script>
-            <script type="text/javascript">
-
-                $(document).ready(function () {
-                    function loadTable(page) {
-                        $.ajax({
-                            url: "pagination.php",
-                            type: "POST",
-                            data: { page_no: page },
-                            success: function (data) {
-                                $("#headings").html(data);
-                            }
-                        });
-                    }
-                    loadTable();
-
-                    $(document).on("click", "#pagination a", function (event) {
-                        event.preventDefault();
-                        var page_id = $(this).attr("id");
-                        loadTable(page_id);
-                    })
-                });
-            </script> -->
+</body>
+</html>

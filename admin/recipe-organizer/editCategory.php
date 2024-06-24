@@ -16,7 +16,7 @@ if (isset($_GET['id'])) {
             $category->set('modified_date', date('Y-m-d H:i:s'));
             $result = $category->edit();
 
-            if (is_integer($result)) {
+            if ($result !== false) {
                 $msg = "Category Updated Successfully";
             } else {
                 $error['msg'] = "Category cannot be updated";
